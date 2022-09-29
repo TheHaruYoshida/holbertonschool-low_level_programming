@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
 #include "_islower.c"
 /**
  * checker - check the code.
