@@ -7,7 +7,7 @@
   * up to "z" in lowercase
   * Return: 0
   */
-int pintor(void)
+int main(void)
 {
 	print_alphabet();
 	return (0);
