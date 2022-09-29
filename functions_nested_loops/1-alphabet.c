@@ -1,4 +1,5 @@
 #include "main.h"
+#include "_alphabet"
 /**
   * main - Prints the alphabet in lowercase, folowed by a new line
   *
@@ -6,7 +7,7 @@
   * up to "z" in lowercase
   * Return: 0
   */
-int main(void)
+int pintor(void)
 {
 	print_alphabet();
 	return (0);
