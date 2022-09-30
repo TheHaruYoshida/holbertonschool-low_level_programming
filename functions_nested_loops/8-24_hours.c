@@ -6,7 +6,7 @@
   * Description: prints each hour since 00:00 up to 23:59
   * Return: Always 0.
   **/
-int main(void)
+int counter(void)
 {
 	    jack_bauer();
 	        return (0);
