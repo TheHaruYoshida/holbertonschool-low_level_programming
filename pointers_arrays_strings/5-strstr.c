@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-  * *_strpbrk - searches a string for any of a set of bytes.
-  * @s: String parameter.
-  * @accept: String for set of bytes.
+  * *_strstr - searches a string for any of a set of bytes.
+  * @haystack: String parameter.
+  * @needle: String for set of bytes.
   *
   * Description: Locates the first occurrence in the string s of any of the
   * bytes in the string accept.
@@ -13,15 +13,28 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
+	char *haycp, *needcp;
 
-	while (*(haystack + i))
+	if (!*needle)
+		return (haystack);
+	while (*haystack)
 	{
-		if (*(haystack + i) == *needle)
-			return (haystack + i);
-		i++;
+		if (*haystack == *needle)
+		{
+			haycp = haystack;
+			needcp = needle;
+			while (*needcp)
+			{
+				if (*haycp++ != *needcp++)
+				{
+					haystack = haycp;
+					break;
+				}
+			}
+			if (haycp != haystack)
+				return (haycp);
+		}
+		haystack++;
 	}
-	if (*(haystack + i) == *needle)
-		return (haystack + i);
-	return (NULL);
+	return (0);
 }
