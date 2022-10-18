@@ -1,7 +1,7 @@
 #ifndef main_h
 #define main_h
 
+#include <stdlib.h>
 #include <stdio.h>
-int main (__attribute__((unused)) int argc, char *argv[])
+int main(int argc, char **argv);
 #endif
-
