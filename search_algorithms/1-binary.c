@@ -16,11 +16,11 @@ void print_array(int *array, size_t low, size_t high)
 	while (i <= high)
 	{
 		printf("%d", array[i]);
-		i++;
 		if (i != high)
 			printf(", ");
 		else
 			printf("\n");
+		i++;
 	}
 }
 
@@ -48,7 +48,7 @@ int binary_search(int *array, size_t size, int value)
 		else if (array[mid] > value)
 			high = mid - 1;
 		else
-			return(mid);
+			return (mid);
 		if (low <= high)
 			print_array(array, low, high);
 	}
